@@ -19,13 +19,13 @@
     <!-- BEGIN: JQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- END: JQuery -->
-
-
-
     <header>
         <img src="assets/img/logo.svg" alt="Logo" width="200">
         <div id="right-element"></div>
     </header>
+
+    <!-- faire un calcule de progression global a affiché en % (section * 100 / 15) -->
+
     <section id="progression">
         <p id="title-chapter"></p>
         <div id="progressbar">
