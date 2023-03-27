@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    min-height: 100vh;
+    font-family: Roboto;
+}
+
+header{
+    padding-left: 20px;
+}
+
+header #right-element{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100px;
+    height: 200px;
+    background: url("../img/top-left-element.svg") no-repeat;
+    background-size: cover;
+}
+
+section{
+    width: 960px;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p{
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    color: #fff;
+    width: 100%;
+}
+
+.stepSections{
+    margin-top: 50px;
+}
+
+h1{
+    color: #553189;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px
+}
+
+p{
+    color: #271a38;
+    font-size: 1rem;
+    line-height: 1.625rem;
+    margin: 0 0 15px 0;
+    font-weight: 300;
+    text-align: justify;
+}
+
+/* BEGIN: PROGRESSBAR */
+
+#progressbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#title-chapter{
+    text-align: center;
+    color: #553189;
+    width: 100%;
+    font-size: 13px;
+    height: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+#nav-chapter{
+    display: flex;
+    justify-content: space-between;
+    width: 960px;
+}
+
+#next-chapter, #previous-chapter{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+#next-chapter span, #previous-chapter span{
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 400;
+    text-align: right;
+}
+
+#next-chapter i, #previous-chapter i{
+    font-size: 25px;
+}
+
+#next-chapter span:hover, #previous-chapter span:hover{
+    text-decoration: none !important;
+}
+
+.cursor{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 15px;
+    color: #553189;
+}
+
+#progressbar .timeline-steps{
+    margin-left: 5px;
+    margin-right: 5px;
+    display: flex;
+    width: 100%;
+}
+
+#progressbar .timeline-step{
+    cursor: pointer;
+    width: 10%;
+    height: 20px;
+    background-color: #ececec;
+    border-bottom: 3px solid rgba(0,0,0,0.25);
+    border-left: 1px solid rgba(0,0,0,0.1);
+}
+
+#progressbar .timeline-step:hover{
+    transition: background-color 0.1s ease;
+    background-color: #553189;
+    cursor: pointer;
+}
+
+#progressbar .end-part{
+    margin-right: 5px;
+}
+
+#progressbar #start-progressbar, #progressbar #end-progressbar{
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: rgba(130,130,130,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#progressbar .icon-progressbar{
+    font-size: 25px;
+    color: #fff;
+}
+
+#progressbar #start-progressbar:hover, #progressbar #end-progressbar:hover{
+    transition: background-color 0.1s ease;
+    background-color: #553189;
+    cursor: pointer;
+}
+
+#progressbar .timeline-steps .active{
+    background-color: #553189 !important;
+    border-right: 1px solid #fff;
+}
+
+#progressbar .active{
+    background-color: #553189 !important;
+}
+
+
+
+
+/* END: PROGRESSBAR */
