@@ -297,6 +297,5 @@ export function progressBar(){
             // On ajoute la propriété "active" sur la première section
             document.querySelector('[data-step = step16]').classList.add("active");
         }
-
     });
 }
