@@ -25,6 +25,25 @@ export function progressBar(){
     let previousChapter = document.getElementById("previous-chapter");
     let nextChapter = document.getElementById("next-chapter");
     let readChapter = [];
+    let btnAllowCookie = document.getElementById("accept-cookie");
+    let btnDenyCookie = document.getElementById("deny-cookie");
+    let allowCookie = false;
+    let pourcentReadValue = 0;
+
+    // On vérifie si l'utilisateur a accepter ou non les cookies
+    btnAllowCookie.addEventListener("click", function(){
+        document.getElementById("cookie-overlay").classList.add("d-none");
+        document.getElementById("cookie-cover").style.filter = "blur(0px)";
+        document.getElementById("cookie-cover").style.position = "relative";
+        allowCookie = true;
+    });
+
+    btnDenyCookie.addEventListener("click", function(){
+        document.getElementById("cookie-overlay").classList.add("d-none");
+        document.getElementById("cookie-cover").style.filter = "blur(0px)";
+        document.getElementById("cookie-cover").style.position = "relative";
+        allowCookie = false;
+    });
 
     // On verifie nos cookie pour voir si des sections ont déjà été lus
 
@@ -59,6 +78,11 @@ export function progressBar(){
             document.querySelector('[data-step =' + readChapter[i] + ']').classList.add("active");
         }
     }
+
+    // On calcule le pourcentage de section lus pour l'afficher
+    let pourcentReadDisplay = document.getElementById("pourcent-read");
+    pourcentReadValue = readChapter.length * 100 / 17;
+    pourcentReadDisplay.textContent = Math.floor(pourcentReadValue);
 
     for(let i = 0; i < sections.length; i++){
 
@@ -172,7 +196,6 @@ export function progressBar(){
         // On calcule l'étape suivante
         let nextStep = stepParse + 1;
         state = "step" + nextStep;
-        
 
         // On détermine l'étape précédente
         let readStep = nextStep - 1;
@@ -201,8 +224,10 @@ export function progressBar(){
             
         }
     
-        // On ajouté la section lus dans les cookies
-        document.cookie = 'step=' + JSON.stringify(readChapter);
+        // On ajoute la section lus dans les cookies si l'utilisateur à accepter les cookies
+        if(allowCookie){
+            document.cookie = 'step=' + JSON.stringify(readChapter);
+        }
         
         // On cache tous les contenues des sections
         let stepSection = document.getElementsByClassName("stepSections");
@@ -249,6 +274,10 @@ export function progressBar(){
             // On cache le lien chapitre suivant
             nextChapter.classList.add("d-none");
         }
+
+        // On calcule le pourcentage de sections lus
+        pourcentReadValue = readChapter.length * 100 / 17;
+        pourcentReadDisplay.textContent = Math.floor(pourcentReadValue);
     });
 
     previousChapter.addEventListener("click", function(){

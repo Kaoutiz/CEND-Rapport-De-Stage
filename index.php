@@ -19,178 +19,194 @@
     <!-- BEGIN: JQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- END: JQuery -->
-    <header>
-        <img src="assets/img/logo.svg" alt="Logo" width="200">
-        <div id="right-element"></div>
-    </header>
-
-    <!-- faire un calcule de progression global a affiché en % (section * 100 / 15) -->
-
-    <section id="progression">
-        <p id="title-chapter"></p>
-        <div id="progressbar">
-            <div id="start-progressbar" data-step="step0">
-                <i class='bx bx-home icon-progressbar'></i>
+    <div id="cookie-overlay">
+        <div id="cookie-content">
+            <div id="cookie-header">
+                <p class="d-flex align-items-center title-cookie"><span>Des cookies sont nécessaires !</span> <i class='bx bx-cookie'></i></p>
             </div>
-            <div class="timeline-steps">
-                <div class="timeline-step" data-step="step1">
-                    <div class="cursor d-none"><i class='bx bxs-up-arrow'></i></div>
+            <div id="cookie-body">
+                <img src="assets/img/logo.svg" alt="Logo" width="150" class="logo-cookie">
+                <h2>Pour une meilleure expérience, acceptez les cookies !</h2>
+                <p>Nous utilisons les cookies afin de sauvegarder l'avancement de votre navigation sur le rapport de stage. Cela vous permettra de retrouver les sections lues et de connaître votre état d'avancement global. Nous ne stockons aucune information personnelle vous concernant.</p>
+                <div class="d-flex flex-column" id="cookie-footer">
+                    <button id="accept-cookie">Accepter et continuer</button>
+                    <div id="deny-cookie" class="d-flex align-items-center justify-content-center mt-2"><span>Refuser</span><i class='bx bx-right-arrow-alt'></i></div>
                 </div>
-                <div class="timeline-step" data-step="step2">
-                    <div class="cursor d-none"><i class='bx bxs-up-arrow'></i></div>
-                </div>
-                <div class="timeline-step" data-step="step3">
-                    <div class="cursor d-none"><i class='bx bxs-up-arrow'></i></div>
-                </div>
-                <div class="timeline-step" data-step="step4">
-                    <div class="cursor d-none"><i class='bx bxs-up-arrow'></i></div>
-                </div>
-                <div class="timeline-step end-part" data-step="step5">
-                    <div class="cursor d-none"><i class='bx bxs-up-arrow'></i></div>
-                </div>
-                <div class="timeline-step" data-step="step6">
-                    <div class="cursor d-none"><i class='bx bxs-up-arrow'></i></div>
-                </div>
-                <div class="timeline-step" data-step="step7">
-                    <div class="cursor d-none"><i class='bx bxs-up-arrow'></i></div>
-                </div>
-                <div class="timeline-step" data-step="step8">
-                    <div class="cursor d-none"><i class='bx bxs-up-arrow'></i></div>
-                </div>
-                <div class="timeline-step" data-step="step9">
-                    <div class="cursor d-none"><i class='bx bxs-up-arrow'></i></div>
-                </div>
-                <div class="timeline-step end-part" data-step="step10">
-                    <div class="cursor d-none"><i class='bx bxs-up-arrow'></i></div>
-                </div>
-                <div class="timeline-step" data-step="step11">
-                    <div class="cursor d-none"><i class='bx bxs-up-arrow'></i></div>
-                </div>
-                <div class="timeline-step" data-step="step12">
-                    <div class="cursor d-none"><i class='bx bxs-up-arrow'></i></div>
-                </div>
-                <div class="timeline-step" data-step="step13">
-                    <div class="cursor d-none"><i class='bx bxs-up-arrow'></i></div>
-                </div>
-                <div class="timeline-step" data-step="step14">
-                    <div class="cursor d-none"><i class='bx bxs-up-arrow'></i></div>
-                </div>
-                <div class="timeline-step" data-step="step15">
-                    <div class="cursor d-none"><i class='bx bxs-up-arrow'></i></div>
-                </div>
-            </div>
-            <div id="end-progressbar" data-step="step16">
-                <i class='bx bxs-flag-alt icon-progressbar'></i>
             </div>
         </div>
-    </section>
+     </div>
+    <div id="cookie-cover">
+        <header>
+            <img src="assets/img/logo.svg" alt="Logo" width="200">
+            <div id="right-element"></div>
+        </header>
+        <section id="progression">
+            <p id="title-chapter"></p>
+            <div id="progressbar">
+                <div id="start-progressbar" data-step="step0">
+                    <i class='bx bx-home icon-progressbar'></i>
+                </div>
+                <div class="timeline-steps">
+                    <div class="timeline-step" data-step="step1">
+                        <div class="cursor d-none"><i class='bx bxs-up-arrow'></i></div>
+                    </div>
+                    <div class="timeline-step" data-step="step2">
+                        <div class="cursor d-none"><i class='bx bxs-up-arrow'></i></div>
+                    </div>
+                    <div class="timeline-step" data-step="step3">
+                        <div class="cursor d-none"><i class='bx bxs-up-arrow'></i></div>
+                    </div>
+                    <div class="timeline-step" data-step="step4">
+                        <div class="cursor d-none"><i class='bx bxs-up-arrow'></i></div>
+                    </div>
+                    <div class="timeline-step end-part" data-step="step5">
+                        <div class="cursor d-none"><i class='bx bxs-up-arrow'></i></div>
+                    </div>
+                    <div class="timeline-step" data-step="step6">
+                        <div class="cursor d-none"><i class='bx bxs-up-arrow'></i></div>
+                    </div>
+                    <div class="timeline-step" data-step="step7">
+                        <div class="cursor d-none"><i class='bx bxs-up-arrow'></i></div>
+                    </div>
+                    <div class="timeline-step" data-step="step8">
+                        <div class="cursor d-none"><i class='bx bxs-up-arrow'></i></div>
+                    </div>
+                    <div class="timeline-step" data-step="step9">
+                        <div class="cursor d-none"><i class='bx bxs-up-arrow'></i></div>
+                    </div>
+                    <div class="timeline-step end-part" data-step="step10">
+                        <div class="cursor d-none"><i class='bx bxs-up-arrow'></i></div>
+                    </div>
+                    <div class="timeline-step" data-step="step11">
+                        <div class="cursor d-none"><i class='bx bxs-up-arrow'></i></div>
+                    </div>
+                    <div class="timeline-step" data-step="step12">
+                        <div class="cursor d-none"><i class='bx bxs-up-arrow'></i></div>
+                    </div>
+                    <div class="timeline-step" data-step="step13">
+                        <div class="cursor d-none"><i class='bx bxs-up-arrow'></i></div>
+                    </div>
+                    <div class="timeline-step" data-step="step14">
+                        <div class="cursor d-none"><i class='bx bxs-up-arrow'></i></div>
+                    </div>
+                    <div class="timeline-step" data-step="step15">
+                        <div class="cursor d-none"><i class='bx bxs-up-arrow'></i></div>
+                    </div>
+                </div>
+                <div id="end-progressbar" data-step="step16">
+                    <i class='bx bxs-flag-alt icon-progressbar'></i>
+                </div>
+            </div>
+            <p class="text-center">Terminé: <span id="pourcent-read">0</span>%</p>
+        </section>
 
-    <!-- BEGIN: Step0 -->
-    <section id="step0" class="stepSections">
-        <h1>Rapport de stage 2023 - Gast Bryan</h1>
-        <p>Bienvenue sur mon rapport de stage de l'année 2023. Je vais vous présenter ici le projet que j'ai réalisé lors de mon alternance dans l'entreprise Angels Digital. Pour rapel je suis en alternance dans cette entreprise depuis le 02 septembre 2022 suite au stage de l'année dernière. Le stage vais débuter le 04 avril 2022 et c'est étendue jusqu'au 31 août 2022. Il devait duré initialement 1 mois.</p>
-    </section>
-    <!-- END: Step0 -->
-    <!-- BEGIN: Step1 -->
-    <section id="step1" class="stepSections d-none">
-        <h1>Présentation de l'entreprise</h1>
-        <p>Contenue</p>
-    </section>
-    <!-- END: Step1 -->
-    <!-- BEGIN: Step2 -->
-    <section id="step2" class="stepSections d-none">
-        <h1>CEND, qu'est-ce que c'est ?</h1>
-        <p>Contenue</p>
-    </section>
-    <!-- END: Step2 -->
-    <!-- BEGIN: Step3 -->
-    <section id="step3" class="stepSections d-none">
-        <h1>Quels sont les prérequis ?</h1>
-        <p>Contenue</p>
-    </section>
-    <!-- END: Step3 -->
-    <!-- BEGIN: Step4 -->
-    <section id="step4" class="stepSections d-none">
-        <h1>Mise en place de l'environnement NodeJS</h1>
-        <p>Contenue</p>
-    </section>
-    <!-- END: Step4 -->
-    <!-- BEGIN: Step5 -->
-    <section id="step5" class="stepSections d-none">
-        <h1>Mise en place de l'environnement React Native</h1>
-        <p>Contenue</p>
-    </section>
-    <!-- END: Step5 -->
-    <!-- BEGIN: Step6 -->
-    <section id="step6" class="stepSections d-none">
-        <h1>Création d'un système de connexion lié à une base de données SQL existante</h1>
-        <p>Contenue</p>
-    </section>
-    <!-- END: Step6 -->
-    <!-- BEGIN: Step7 -->
-    <section id="step7" class="stepSections d-none">
-        <h1>Récupération de l'ID de l'utilisateur et transmission entre les différents écrans grâce aux 'props'</h1>
-        <p>Contenue</p>
-    </section>
-    <!-- END: Step7 -->
-    <!-- BEGIN: Step8 -->
-    <section id="step8" class="stepSections d-none">
-        <h1>Création de la page de scan</h1>
-        <p>Contenue</p>
-    </section>
-    <!-- END: Step8 -->
-    <!-- BEGIN: Step9 -->
-    <section id="step9" class="stepSections d-none">
-        <h1>Récupération du code en base64 du scan</h1>
-        <p>Contenue</p>
-    </section>
-    <!-- END: Step9 -->
-    <!-- BEGIN: Step10 -->
-    <section id="step10" class="stepSections d-none">
-        <h1>Envoi d'une requête au serveur avec Ajax</h1>
-        <p>Contenue</p>
-    </section>
-    <!-- END: Step10 -->
-    <!-- BEGIN: Step11 -->
-    <section id="step11" class="stepSections d-none">
-        <h1>Création d'une navigation dans l'application</h1>
-        <p>Contenue</p>
-    </section>
-    <!-- END: Step11 -->
-    <!-- BEGIN: Step12 -->
-    <section id="step12" class="stepSections d-none">
-        <h1>Traitement de la requête côté serveur en PHP</h1>
-        <p>Contenue</p>
-    </section>
-    <!-- END: Step12 -->
-    <!-- BEGIN: Step13 -->
-    <section id="step13" class="stepSections d-none">
-        <h1>Enregistrement des scans dans la base de données avec les bons paramètres en fonction du type de scan choisi</h1>
-        <p>Contenue</p>
-    </section>
-    <!-- END: Step13 -->
-    <!-- BEGIN: Step14 -->
-    <section id="step14" class="stepSections d-none">
-        <h1>Récupération du résultat de la requête</h1>
-        <p>Contenue</p>
-    </section>
-    <!-- END: Step14 -->
-    <!-- BEGIN: Step15 -->
-    <section id="step15" class="stepSections d-none">
-        <h1>Conclusion</h1>
-        <p>Contenue</p>
-    </section>
-    <!-- END: Step15 -->
-    <!-- BEGIN: Step16 -->
-    <section id="step16" class="stepSections d-none">
-        <h1>Fin</h1>
-        <p>Terminé</p>
-    </section>
-    <!-- END: Step16 -->
-    <section id="nav-chapter">
-        <div id="previous-chapter-zone"><div id="previous-chapter" class="d-none"><i class='bx bx-chevron-left' ></i><span>Chapitre précédent</span></div></div>
-        <div id="next-chapter-zone"><div id="next-chapter"><span>Chapitre suivant</span><i class='bx bx-chevron-right' ></i></div></div>
-    </section>
+        <!-- BEGIN: Step0 -->
+        <section id="step0" class="stepSections">
+            <h1>Rapport de stage 2023 - Gast Bryan</h1>
+            <p>Bienvenue sur mon rapport de stage de l'année 2023. Je vais vous présenter ici le projet que j'ai réalisé lors de mon alternance dans l'entreprise Angels Digital. Pour rapel je suis en alternance dans cette entreprise depuis le 02 septembre 2022 suite au stage de l'année dernière. Le stage vais débuter le 04 avril 2022 et c'est étendue jusqu'au 31 août 2022. Il devait duré initialement 1 mois.</p>
+        </section>
+        <!-- END: Step0 -->
+        <!-- BEGIN: Step1 -->
+        <section id="step1" class="stepSections d-none">
+            <h1>Présentation de l'entreprise</h1>
+            <p>Contenue</p>
+        </section>
+        <!-- END: Step1 -->
+        <!-- BEGIN: Step2 -->
+        <section id="step2" class="stepSections d-none">
+            <h1>CEND, qu'est-ce que c'est ?</h1>
+            <p>Contenue</p>
+        </section>
+        <!-- END: Step2 -->
+        <!-- BEGIN: Step3 -->
+        <section id="step3" class="stepSections d-none">
+            <h1>Quels sont les prérequis ?</h1>
+            <p>Contenue</p>
+        </section>
+        <!-- END: Step3 -->
+        <!-- BEGIN: Step4 -->
+        <section id="step4" class="stepSections d-none">
+            <h1>Mise en place de l'environnement NodeJS</h1>
+            <p>Contenue</p>
+        </section>
+        <!-- END: Step4 -->
+        <!-- BEGIN: Step5 -->
+        <section id="step5" class="stepSections d-none">
+            <h1>Mise en place de l'environnement React Native</h1>
+            <p>Contenue</p>
+        </section>
+        <!-- END: Step5 -->
+        <!-- BEGIN: Step6 -->
+        <section id="step6" class="stepSections d-none">
+            <h1>Création d'un système de connexion lié à une base de données SQL existante</h1>
+            <p>Contenue</p>
+        </section>
+        <!-- END: Step6 -->
+        <!-- BEGIN: Step7 -->
+        <section id="step7" class="stepSections d-none">
+            <h1>Récupération de l'ID de l'utilisateur et transmission entre les différents écrans grâce aux 'props'</h1>
+            <p>Contenue</p>
+        </section>
+        <!-- END: Step7 -->
+        <!-- BEGIN: Step8 -->
+        <section id="step8" class="stepSections d-none">
+            <h1>Création de la page de scan</h1>
+            <p>Contenue</p>
+        </section>
+        <!-- END: Step8 -->
+        <!-- BEGIN: Step9 -->
+        <section id="step9" class="stepSections d-none">
+            <h1>Récupération du code en base64 du scan</h1>
+            <p>Contenue</p>
+        </section>
+        <!-- END: Step9 -->
+        <!-- BEGIN: Step10 -->
+        <section id="step10" class="stepSections d-none">
+            <h1>Envoi d'une requête au serveur avec Ajax</h1>
+            <p>Contenue</p>
+        </section>
+        <!-- END: Step10 -->
+        <!-- BEGIN: Step11 -->
+        <section id="step11" class="stepSections d-none">
+            <h1>Création d'une navigation dans l'application</h1>
+            <p>Contenue</p>
+        </section>
+        <!-- END: Step11 -->
+        <!-- BEGIN: Step12 -->
+        <section id="step12" class="stepSections d-none">
+            <h1>Traitement de la requête côté serveur en PHP</h1>
+            <p>Contenue</p>
+        </section>
+        <!-- END: Step12 -->
+        <!-- BEGIN: Step13 -->
+        <section id="step13" class="stepSections d-none">
+            <h1>Enregistrement des scans dans la base de données avec les bons paramètres en fonction du type de scan choisi</h1>
+            <p>Contenue</p>
+        </section>
+        <!-- END: Step13 -->
+        <!-- BEGIN: Step14 -->
+        <section id="step14" class="stepSections d-none">
+            <h1>Récupération du résultat de la requête</h1>
+            <p>Contenue</p>
+        </section>
+        <!-- END: Step14 -->
+        <!-- BEGIN: Step15 -->
+        <section id="step15" class="stepSections d-none">
+            <h1>Conclusion</h1>
+            <p>Contenue</p>
+        </section>
+        <!-- END: Step15 -->
+        <!-- BEGIN: Step16 -->
+        <section id="step16" class="stepSections d-none">
+            <h1>Fin</h1>
+            <p>Terminé</p>
+        </section>
+        <!-- END: Step16 -->
+        <section id="nav-chapter">
+            <div id="previous-chapter-zone"><div id="previous-chapter" class="d-none"><i class='bx bx-chevron-left' ></i><span>Chapitre précédent</span></div></div>
+            <div id="next-chapter-zone"><div id="next-chapter"><span>Chapitre suivant</span><i class='bx bx-chevron-right' ></i></div></div>
+        </section>
+    </div>
     
     <!-- BEGIN: Footer -->
     <footer>
