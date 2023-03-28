@@ -213,6 +213,7 @@ p{
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
     border-radius: 15px;
+    position: relative;
 }
 
 #cookie-header{
@@ -268,8 +269,10 @@ p{
 #cookie-footer{
     position: absolute;
     bottom: 0;
-    width: 97%;
+    width: 90%;
     margin-bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 #deny-cookie{

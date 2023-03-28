@@ -28,10 +28,10 @@
                 <img src="assets/img/logo.svg" alt="Logo" width="150" class="logo-cookie">
                 <h2>Pour une meilleure expérience, acceptez les cookies !</h2>
                 <p>Nous utilisons les cookies afin de sauvegarder l'avancement de votre navigation sur le rapport de stage. Cela vous permettra de retrouver les sections lues et de connaître votre état d'avancement global. Nous ne stockons aucune information personnelle vous concernant.</p>
-                <div class="d-flex flex-column" id="cookie-footer">
-                    <button id="accept-cookie">Accepter et continuer</button>
-                    <div id="deny-cookie" class="d-flex align-items-center justify-content-center mt-2"><span>Refuser</span><i class='bx bx-right-arrow-alt'></i></div>
-                </div>
+            </div>
+            <div class="d-flex flex-column" id="cookie-footer">
+                <button id="accept-cookie">Accepter et continuer</button>
+                <div id="deny-cookie" class="d-flex align-items-center justify-content-center mt-2"><span>Refuser</span><i class='bx bx-right-arrow-alt'></i></div>
             </div>
         </div>
      </div>
@@ -144,7 +144,7 @@
         <!-- END: Step6 -->
         <!-- BEGIN: Step7 -->
         <section id="step7" class="stepSections d-none">
-            <h1>Récupération de l'ID de l'utilisateur et transmission entre les différents écrans grâce aux 'props'</h1>
+            <h1>Récupération de l'ID de l'utilisateur et transmission grâce aux 'props'</h1>
             <p>Contenue</p>
         </section>
         <!-- END: Step7 -->
@@ -180,7 +180,7 @@
         <!-- END: Step12 -->
         <!-- BEGIN: Step13 -->
         <section id="step13" class="stepSections d-none">
-            <h1>Enregistrement des scans dans la base de données avec les bons paramètres en fonction du type de scan choisi</h1>
+            <h1>Enregistrement des scans dans la base de données</h1>
             <p>Contenue</p>
         </section>
         <!-- END: Step13 -->
