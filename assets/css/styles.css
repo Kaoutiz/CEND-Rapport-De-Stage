@@ -55,6 +55,13 @@ h1{
     margin-bottom: 20px
 }
 
+h2{
+    color: #553189;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px 
+}
+
 p{
     color: #271a38;
     font-size: 1rem;
@@ -176,3 +183,126 @@ p{
 }
 
 /* END: PROGRESSBAR */
+
+/* BEGIN: COOKIE */
+
+#cookie-cover{
+    width: 100%;
+    filter: blur(5px);
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+#cookie-overlay{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(255,255,255,.5);
+    z-index: 999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cookie-content{
+    width: 40%;
+    min-height: 500px;
+    height: auto;
+    background: #553189;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
+
+#cookie-header{
+    width: 100%;
+    height: 50px;
+    background: #553189;
+    padding: 10px;
+    -webkit-border-top-left-radius: 15px;
+    -webkit-border-top-right-radius: 15px;
+    -moz-border-radius-topleft: 15px;
+    -moz-border-radius-topright: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    display: flex;
+    align-items: center;
+}
+
+#cookie-body{
+    position: relative;
+    background: #fff;
+    padding: 10px;
+    width: 100%;
+    min-height: 500px;
+    height: 100%;
+    -webkit-border-bottom-right-radius: 15px;
+    -webkit-border-bottom-left-radius: 15px;
+    -moz-border-radius-bottomright: 15px;
+    -moz-border-radius-bottomleft: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    -webkit-box-shadow: 2px 9px 13px -4px rgba(0,0,0,0.4); 
+    box-shadow: 2px 9px 13px -4px rgba(0,0,0,0.4);
+}
+
+#cookie-content p{
+    color: #fff;
+    margin: 0;
+}
+
+.title-cookie span{
+    margin-right: 5px;
+}
+
+.logo-cookie{
+    display: flex;
+    margin: 0 auto;
+}
+
+#cookie-body p{
+    color: #553189;
+}
+
+#cookie-footer{
+    position: absolute;
+    bottom: 0;
+    width: 97%;
+    margin-bottom: 20px;
+}
+
+#deny-cookie{
+    cursor: pointer;
+    font-weight: 400;
+    color: #553189;
+}
+
+#deny-cookie span{
+    text-decoration: underline;
+}
+
+#deny-cookie:hover span{
+    text-decoration: none;
+}
+
+#accept-cookie{
+    width: 100%;
+    background-color: #553189;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+/* END: COOKIE */
+
+/* BEGIN: RESPONSIVE */
+
+@media screen and (max-width: 930px) {
+    #cookie-content{
+        width: 80%;
+    }
+}
+
+/* END: RESPONSIVE */
