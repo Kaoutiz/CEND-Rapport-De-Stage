@@ -12,13 +12,13 @@ export function progressBar(){
         "step4" : "Mise en place de l'environnement NodeJS",
         "step5" : "Mise en place de l'environnement React Native",
         "step6" : "Création d'un système de connexion lié à une base de données SQL existante",
-        "step7" : "Récupération de l'ID de l'utilisateur et transmission entre les différents écrans grâce aux 'props'",
+        "step7" : "Récupération de l'ID de l'utilisateur et transmission grâce aux 'props'",
         "step8" : "Création de la page de scan",
         "step9" : "Récupération du code en base64 du scan",
         "step10" : "Envoi d'une requête au serveur avec Ajax",
         "step11" : "Création d'une navigation dans l'application",
         "step12" : "Traitement de la requête côté serveur en PHP",
-        "step13" : "Enregistrement des scans dans la base de données avec les bons paramètres en fonction du type de scan choisi",
+        "step13" : "Enregistrement des scans dans la base de données",
         "step14" : "Récupération du résultat de la requête",
         "step15" : "Conclusion"
     };
