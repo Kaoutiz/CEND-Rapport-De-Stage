@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gast Bryan - Rapport de stage</title>
+    <link rel="icon" href="assets/img/favicon.svg" />
 
     <!-- BEGIN: Librairies -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
@@ -19,202 +20,59 @@
     <!-- BEGIN: JQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- END: JQuery -->
-    <div id="cookie-overlay">
-        <div id="cookie-content">
-            <div id="cookie-header">
-                <p class="d-flex align-items-center title-cookie"><span>Des cookies sont nécessaires !</span> <i class='bx bx-cookie'></i></p>
-            </div>
-            <div id="cookie-body">
-                <img src="assets/img/logo.svg" alt="Logo" width="150" class="logo-cookie">
-                <h2>Pour une meilleure expérience, acceptez les cookies !</h2>
-                <p>Nous utilisons les cookies afin de sauvegarder l'avancement de votre navigation sur le rapport de stage. Cela vous permettra de retrouver les sections lues et de connaître votre état d'avancement global. Nous ne stockons aucune information personnelle vous concernant.</p>
-            </div>
-            <div class="d-flex flex-column" id="cookie-footer">
-                <button id="accept-cookie">Accepter et continuer</button>
-                <div id="deny-cookie" class="d-flex align-items-center justify-content-center mt-2"><span>Refuser</span><i class='bx bx-right-arrow-alt'></i></div>
-            </div>
-        </div>
-     </div>
+    <?php include("templates/cookie.php"); ?>
     <div id="cookie-cover">
+
+        <!-- BEGIN: HEADER -->
         <header>
-            <img src="assets/img/logo.svg" alt="Logo" width="200">
+            <div id="left-element">
+                <a href="index.php">
+                    <div id="logo"></div>
+                </a>
+            </div>
+            
             <div id="right-element"></div>
         </header>
-        <section id="progression">
-            <p id="title-chapter"></p>
-            <div id="progressbar">
-                <div id="start-progressbar" data-step="step0">
-                    <i class='bx bx-home icon-progressbar'></i>
-                </div>
-                <div class="timeline-steps">
-                    <div class="timeline-step" data-step="step1">
-                        <div class="cursor d-none"><i class='bx bxs-up-arrow'></i></div>
-                    </div>
-                    <div class="timeline-step" data-step="step2">
-                        <div class="cursor d-none"><i class='bx bxs-up-arrow'></i></div>
-                    </div>
-                    <div class="timeline-step" data-step="step3">
-                        <div class="cursor d-none"><i class='bx bxs-up-arrow'></i></div>
-                    </div>
-                    <div class="timeline-step" data-step="step4">
-                        <div class="cursor d-none"><i class='bx bxs-up-arrow'></i></div>
-                    </div>
-                    <div class="timeline-step end-part" data-step="step5">
-                        <div class="cursor d-none"><i class='bx bxs-up-arrow'></i></div>
-                    </div>
-                    <div class="timeline-step" data-step="step6">
-                        <div class="cursor d-none"><i class='bx bxs-up-arrow'></i></div>
-                    </div>
-                    <div class="timeline-step" data-step="step7">
-                        <div class="cursor d-none"><i class='bx bxs-up-arrow'></i></div>
-                    </div>
-                    <div class="timeline-step" data-step="step8">
-                        <div class="cursor d-none"><i class='bx bxs-up-arrow'></i></div>
-                    </div>
-                    <div class="timeline-step" data-step="step9">
-                        <div class="cursor d-none"><i class='bx bxs-up-arrow'></i></div>
-                    </div>
-                    <div class="timeline-step end-part" data-step="step10">
-                        <div class="cursor d-none"><i class='bx bxs-up-arrow'></i></div>
-                    </div>
-                    <div class="timeline-step" data-step="step11">
-                        <div class="cursor d-none"><i class='bx bxs-up-arrow'></i></div>
-                    </div>
-                    <div class="timeline-step" data-step="step12">
-                        <div class="cursor d-none"><i class='bx bxs-up-arrow'></i></div>
-                    </div>
-                    <div class="timeline-step" data-step="step13">
-                        <div class="cursor d-none"><i class='bx bxs-up-arrow'></i></div>
-                    </div>
-                    <div class="timeline-step" data-step="step14">
-                        <div class="cursor d-none"><i class='bx bxs-up-arrow'></i></div>
-                    </div>
-                    <div class="timeline-step" data-step="step15">
-                        <div class="cursor d-none"><i class='bx bxs-up-arrow'></i></div>
-                    </div>
-                </div>
-                <div id="end-progressbar" data-step="step16">
-                    <i class='bx bxs-flag-alt icon-progressbar'></i>
-                </div>
-            </div>
-            <p class="text-center">Terminé: <span id="pourcent-read">0</span>%</p>
-        </section>
+        <!-- END: HEADER -->
 
-        <!-- BEGIN: Step0 -->
-        <section id="step0" class="stepSections">
-            <h1>Rapport de stage 2023 - Gast Bryan</h1>
-            <p>Bienvenue sur mon rapport de stage de l'année 2023. Je vais vous présenter ici le projet que j'ai réalisé lors de mon alternance dans l'entreprise Angels Digital. Pour rapel je suis en alternance dans cette entreprise depuis le 02 septembre 2022 suite au stage de l'année dernière. Le stage vais débuter le 04 avril 2022 et c'est étendue jusqu'au 31 août 2022. Il devait duré initialement 1 mois.</p>
+        <!-- BEGIN: NAV -->
+        <nav>
+            <ul>
+                <a href="index.php"><li class="active">Accueil</li></a>
+                <a href="pages/rapport-lancement.php"><li class="non-active">Rapport de lancement</li></a>
+                <a href="pages/rapport-final.php"><li class="non-active">Rapport final</li></a>
+            </ul>
+        </nav>
+        <!-- END: NAV -->
+
+        <!-- BEGIN: CONTENT -->
+        <section>
+            <h1>Rapport de stage - 2023 Gast Bryan</h1>
+            <h3>Informations</h3>  
+            <ul id="information-stage">
+                <li class="d-flex"><span class="d-flex align-items-center"><i class='bx bx-map icon-infos' ></i> Lieu de stage:</span><span class="info-stage name-entreprise">Angels Digital</span></li>
+                <li class="d-flex"><span class="d-flex align-items-center"><i class='bx bx-user icon-infos' ></i> Maître de stage:</span><span class="info-stage">Karim MOUFEKKIR</span></li>
+                <li class="d-flex"><span class="d-flex align-items-center"><i class='bx bx-buildings icon-infos' ></i> Adresse:</span><span class="info-stage">8T Boulevard Bonrepos, 31000 TOULOUSE</span></li>
+            </ul>
         </section>
-        <!-- END: Step0 -->
-        <!-- BEGIN: Step1 -->
-        <section id="step1" class="stepSections d-none">
-            <h1>Présentation de l'entreprise</h1>
-            <p>Contenue</p>
+        <section class="mt-2">
+            <h2>Présentation de l'entreprise</h2>
+            <p>L'entreprise dans laquelle j'effectue mon alternance se nomme Angels Digital. Elle est située à Toulouse et nous travaillons dans les locaux de l'entreprise d'audit Action Plus, qui appartient au même employeur mais ne se consacre pas du tout à la même activité. En effet, Audit Action Plus est un cabinet comptable tandis qu'Angels Digital est une entreprise de conception de logiciels et de conseil pour les entreprises souhaitant se digitaliser. La société est dirigée par M. Moufekkir en tant que président général et M. Smara en tant que président, et compte 2 alternants, dont moi. À ma connaissance, il n'y a pas d'employé sous contrat. L'entreprise a été créée le 1er décembre 2014.</p>
         </section>
-        <!-- END: Step1 -->
-        <!-- BEGIN: Step2 -->
-        <section id="step2" class="stepSections d-none">
-            <h1>CEND, qu'est-ce que c'est ?</h1>
-            <p>Contenue</p>
+        <section class="mt-2">
+            <h2>Sujet du stage</h2>
+            <p>Le projet de ce stage est la continuation du projet du stage de l'année dernière. J'expliquerai en détail le projet de l'année dernière et celui-ci dans le rapport final pour bien comprendre de quoi il s'agit. En résumé, il s'agit d'une application mobile de numérisation de documents comptables. Cette application permet aux utilisateurs d'un compte CoqPix de numériser des documents et de les envoyer directement dans le cloud de leur compte CoqPix personnel. Cette fonctionnalité simplifie encore plus l'utilisation de la plateforme en ligne et permet également d'envoyer des documents au comptable de manière plus rapide. Pour comprendre ce qu'est CoqPix ainsi que son cloud, j'ai détaillé tout cela sur la première page du rapport de lancement, accessible <a href="pages/rapport-lancement.php">ici</a>. Ce projet s'est étalé sur plusieurs mois et j'ai travaillé en collaboration avec un graphiste de l'entreprise qui a réalisé les visuels que j'ai ensuite adaptés pour l'application.</p>   
         </section>
-        <!-- END: Step2 -->
-        <!-- BEGIN: Step3 -->
-        <section id="step3" class="stepSections d-none">
-            <h1>Quels sont les prérequis ?</h1>
-            <p>Contenue</p>
+        <section class="mt-2">
+            <h3>Mes liens:</h3>
+            <p class="social-link-p"><a href="https://www.bryangast.fr" target="_blank" class="d-flex align-items-center"><i class='bx bx-link icon-social'></i><span class="link-social">https://www.bryangast.fr</span></a></p>
+            <p class="social-link-p"><a href="https://www.instagram.com/kaoutiz.dev/" target="_blank" class="d-flex align-items-center"><i class='bx bxl-instagram-alt icon-social'></i><span class="link-social">Kaoutiz.dev</span></a></p>
         </section>
-        <!-- END: Step3 -->
-        <!-- BEGIN: Step4 -->
-        <section id="step4" class="stepSections d-none">
-            <h1>Mise en place de l'environnement NodeJS</h1>
-            <p>Contenue</p>
-        </section>
-        <!-- END: Step4 -->
-        <!-- BEGIN: Step5 -->
-        <section id="step5" class="stepSections d-none">
-            <h1>Mise en place de l'environnement React Native</h1>
-            <p>Contenue</p>
-        </section>
-        <!-- END: Step5 -->
-        <!-- BEGIN: Step6 -->
-        <section id="step6" class="stepSections d-none">
-            <h1>Création d'un système de connexion lié à une base de données SQL existante</h1>
-            <p>Contenue</p>
-        </section>
-        <!-- END: Step6 -->
-        <!-- BEGIN: Step7 -->
-        <section id="step7" class="stepSections d-none">
-            <h1>Récupération de l'ID de l'utilisateur et transmission grâce aux 'props'</h1>
-            <p>Contenue</p>
-        </section>
-        <!-- END: Step7 -->
-        <!-- BEGIN: Step8 -->
-        <section id="step8" class="stepSections d-none">
-            <h1>Création de la page de scan</h1>
-            <p>Contenue</p>
-        </section>
-        <!-- END: Step8 -->
-        <!-- BEGIN: Step9 -->
-        <section id="step9" class="stepSections d-none">
-            <h1>Récupération du code en base64 du scan</h1>
-            <p>Contenue</p>
-        </section>
-        <!-- END: Step9 -->
-        <!-- BEGIN: Step10 -->
-        <section id="step10" class="stepSections d-none">
-            <h1>Envoi d'une requête au serveur avec Ajax</h1>
-            <p>Contenue</p>
-        </section>
-        <!-- END: Step10 -->
-        <!-- BEGIN: Step11 -->
-        <section id="step11" class="stepSections d-none">
-            <h1>Création d'une navigation dans l'application</h1>
-            <p>Contenue</p>
-        </section>
-        <!-- END: Step11 -->
-        <!-- BEGIN: Step12 -->
-        <section id="step12" class="stepSections d-none">
-            <h1>Traitement de la requête côté serveur en PHP</h1>
-            <p>Contenue</p>
-        </section>
-        <!-- END: Step12 -->
-        <!-- BEGIN: Step13 -->
-        <section id="step13" class="stepSections d-none">
-            <h1>Enregistrement des scans dans la base de données</h1>
-            <p>Contenue</p>
-        </section>
-        <!-- END: Step13 -->
-        <!-- BEGIN: Step14 -->
-        <section id="step14" class="stepSections d-none">
-            <h1>Récupération du résultat de la requête</h1>
-            <p>Contenue</p>
-        </section>
-        <!-- END: Step14 -->
-        <!-- BEGIN: Step15 -->
-        <section id="step15" class="stepSections d-none">
-            <h1>Conclusion</h1>
-            <p>Contenue</p>
-        </section>
-        <!-- END: Step15 -->
-        <!-- BEGIN: Step16 -->
-        <section id="step16" class="stepSections d-none">
-            <h1>Fin</h1>
-            <p>Terminé</p>
-        </section>
-        <!-- END: Step16 -->
-        <section id="nav-chapter">
-            <div id="previous-chapter-zone"><div id="previous-chapter" class="d-none"><i class='bx bx-chevron-left' ></i><span>Chapitre précédent</span></div></div>
-            <div id="next-chapter-zone"><div id="next-chapter"><span>Chapitre suivant</span><i class='bx bx-chevron-right' ></i></div></div>
-        </section>
+        <!-- END: CONTENT -->
     </div>
     
     <!-- BEGIN: Footer -->
-    <footer>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#553189" fill-opacity="1" d="M0,96L20,128C40,160,80,224,120,224C160,224,200,160,240,128C280,96,320,96,360,96C400,96,440,96,480,122.7C520,149,560,203,600,234.7C640,267,680,277,720,261.3C760,245,800,203,840,176C880,149,920,139,960,138.7C1000,139,1040,149,1080,181.3C1120,213,1160,267,1200,250.7C1240,235,1280,149,1320,101.3C1360,53,1400,43,1420,37.3L1440,32L1440,320L1420,320C1400,320,1360,320,1320,320C1280,320,1240,320,1200,320C1160,320,1120,320,1080,320C1040,320,1000,320,960,320C920,320,880,320,840,320C800,320,760,320,720,320C680,320,640,320,600,320C560,320,520,320,480,320C440,320,400,320,360,320C320,320,280,320,240,320C200,320,160,320,120,320C80,320,40,320,20,320L0,320Z"></path>
-        </svg>
-        <p>Gast Bryan - DEUST Webmaster 2ème année - Rapport de stage 2023</p>
-    </footer>
+    <?php include("templates/footer.php"); ?>
     <!-- END: Footer -->
 
     <!-- BEGIN: Librairies -->

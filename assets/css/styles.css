@@ -14,6 +14,17 @@ header{
     padding-left: 20px;
 }
 
+#logo{
+    width: 200px;
+    height: 140px;
+    background: url("../img/logo.svg") no-repeat;
+    background-size: cover;
+}
+
+header #left-element{
+    width: 200px;
+}
+
 header #right-element{
     position: absolute;
     right: 0;
@@ -24,7 +35,7 @@ header #right-element{
     background-size: cover;
 }
 
-section{
+section, nav{
     width: 960px;
     margin: 0 auto;
     padding: 5px;
@@ -50,28 +61,164 @@ footer p{
 
 h1{
     color: #553189;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: bold;
     margin-bottom: 20px
 }
 
 h2{
     color: #553189;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px
+}
+
+h3{
+    color: #553189;
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 20px 
 }
 
-p{
+a{
+    color: #553189;
+    font-weight: bold;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+p, li{
     color: #271a38;
     font-size: 1rem;
-    line-height: 1.625rem;
     margin: 0 0 15px 0;
     font-weight: 300;
     text-align: justify;
 }
 
+p{
+    line-height: 1.625rem;
+}
+
+li{
+    line-height: 1rem;
+}
+
+nav{
+    margin-bottom: 20px;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a{
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li{
+    margin-left: 10px;
+    list-style: none;
+    width: 250px;
+    height: 40px;
+    color: #553189;
+    font-weight: 500;
+    border: solid 2px #553189;
+    border-radius: 50px;
+    text-align: center;
+    line-height: 40px;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+nav li.active{
+    background: #553189;
+    color: #fff;
+}
+
+nav li.non-active::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 10%;
+    top: 0;
+    left: 0;
+    background-color: #553189;
+    color: #fff;
+    border-radius: 50px;
+    transition: width 0.3s ease-in-out; 
+    opacity: 0;
+  }
+  
+
+nav li.non-active:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    color: #fff !important;
+    background-color: #553189;
+    border-radius: 50px;
+    z-index: -1;
+    transition: width 1s ease;
+    opacity: 1;
+  }
+  
+  nav li.non-active:hover::before {
+    width: 100%; /* lorsque vous survolez le li, le pseudo-élément se remplira de gauche à droite */
+  }
+
+  nav li.non-active:hover{
+    color: #fff;
+    transition-delay: 0.7s;
+  }
+
 /* END: Global */
+
+
+/* BEGIN: Accueil */
+
+#information-stage span{
+    color: #271a38;
+}
+
+.info-stage{
+    margin-left: 5px;
+    font-style: italic;
+}
+
+.icon-infos{
+    margin-right: 5px;
+}
+
+.name-entreprise{
+    font-weight: bold;
+    font-style: normal;
+}
+
+.icon-social{
+    font-size: 20px;
+}
+
+.social-link-p a{
+    text-decoration: none;
+}
+
+.link-social{
+    margin-left: 5px;
+    color: #553189;
+}
+
+/* END: Accueil */
 
 /* BEGIN: PROGRESSBAR */
 
@@ -95,6 +242,7 @@ p{
     display: flex;
     justify-content: space-between;
     width: 960px;
+    padding-bottom: 350px;
 }
 
 #next-chapter, #previous-chapter{
@@ -131,6 +279,11 @@ p{
     margin-right: 5px;
     display: flex;
     width: 100%;
+}
+
+#difficulty-state{
+    font-size: 25px;
+    margin-left: 5px;
 }
 
 #progressbar .timeline-step{
@@ -188,16 +341,17 @@ p{
 
 #cookie-cover{
     width: 100%;
-    filter: blur(5px);
+    filter: blur(0px);
     position: fixed;
     top: 0;
     z-index: 10;
+    padding-bottom: 50vh;
 }
 
 #cookie-overlay{
     width: 100%;
-    height: 100%;
-    position: fixed;
+    height: 100vh;
+    position: relative;
     background-color: rgba(255,255,255,.5);
     z-index: 999999;
     display: flex;

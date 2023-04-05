@@ -8,15 +8,15 @@ export function progressBar(){
     {
         "step1" : "Présentation de l'entreprise",
         "step2" : "CEND, qu'est-ce que c'est ?",
-        "step3" : "Quels sont les prérequis ?",
-        "step4" : "Mise en place de l'environnement NodeJS",
-        "step5" : "Mise en place de l'environnement React Native",
-        "step6" : "Création d'un système de connexion lié à une base de données SQL existante",
-        "step7" : "Récupération de l'ID de l'utilisateur et transmission grâce aux 'props'",
-        "step8" : "Création de la page de scan",
-        "step9" : "Récupération du code en base64 du scan",
-        "step10" : "Envoi d'une requête au serveur avec Ajax",
-        "step11" : "Création d'une navigation dans l'application",
+        "step3" : "Mise en place de l'environnement de développement",
+        "step4" : "Installation de Node.JS",
+        "step5" : "Initialisé un projet React-Native",
+        "step6" : "Création d'une navigation dans l'application",
+        "step7" : "Création d'un système de connexion",
+        "step8" : "Récupération de l'ID de l'utilisateur et transmission grâce aux 'props'",
+        "step9" : "Création de la page de scan",
+        "step10" : "Récupération du code en base64 du scan",
+        "step11" : "Envoi d'une requête au serveur avec Ajax",
         "step12" : "Traitement de la requête côté serveur en PHP",
         "step13" : "Enregistrement des scans dans la base de données",
         "step14" : "Récupération du résultat de la requête",
@@ -25,25 +25,7 @@ export function progressBar(){
     let previousChapter = document.getElementById("previous-chapter");
     let nextChapter = document.getElementById("next-chapter");
     let readChapter = [];
-    let btnAllowCookie = document.getElementById("accept-cookie");
-    let btnDenyCookie = document.getElementById("deny-cookie");
-    let allowCookie = false;
     let pourcentReadValue = 0;
-
-    // On vérifie si l'utilisateur a accepter ou non les cookies
-    btnAllowCookie.addEventListener("click", function(){
-        document.getElementById("cookie-overlay").classList.add("d-none");
-        document.getElementById("cookie-cover").style.filter = "blur(0px)";
-        document.getElementById("cookie-cover").style.position = "relative";
-        allowCookie = true;
-    });
-
-    btnDenyCookie.addEventListener("click", function(){
-        document.getElementById("cookie-overlay").classList.add("d-none");
-        document.getElementById("cookie-cover").style.filter = "blur(0px)";
-        document.getElementById("cookie-cover").style.position = "relative";
-        allowCookie = false;
-    });
 
     // On verifie nos cookie pour voir si des sections ont déjà été lus
 
@@ -223,9 +205,9 @@ export function progressBar(){
             }
             
         }
-    
+
         // On ajoute la section lus dans les cookies si l'utilisateur à accepter les cookies
-        if(allowCookie){
+        if(sessionStorage.cookiesAccepted === "true"){
             document.cookie = 'step=' + JSON.stringify(readChapter);
         }
         
