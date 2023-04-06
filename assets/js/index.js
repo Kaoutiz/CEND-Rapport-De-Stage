@@ -1,8 +1,10 @@
 import { cookieAcceptation } from "./cookieAcceptation.js";
+import { loading } from "./loading.js";
 import { progressBar } from "./progressbar.js";
 
 document.addEventListener("DOMContentLoaded", function() {
 
+    loading();
     cookieAcceptation();
 
     // On véirfie si la page est l'index comme ça on lance les fonctions lié à cette page uniquement sur celle-ci
@@ -12,7 +14,12 @@ document.addEventListener("DOMContentLoaded", function() {
         // On execture les scripts lié à cette pages uniquement
     }
 
-    progressBar();
+    // On execture les scripts lié à la pages rapport-final uniquement
+    if (url.indexOf("rapport-final.php") !== -1) {
+        progressBar();
+    }
+
+    
 
 });
   

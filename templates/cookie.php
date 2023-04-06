@@ -4,7 +4,7 @@
             <p class="d-flex align-items-center title-cookie"><span>Des cookies sont nécessaires !</span><i class='bx bx-cookie'></i></p>
         </div>
         <div id="cookie-body">
-            <img src="assets/img/logo.svg" alt="Logo" width="150" class="logo-cookie">
+            <img src="../assets/img/logo.svg" alt="Logo" width="150" class="logo-cookie">
             <h2>Pour une meilleure expérience, acceptez les cookies !</h2>
             <p>Nous utilisons les cookies afin de sauvegarder l'avancement de votre navigation sur le rapport de stage.
                 Cela vous permettra de retrouver les sections lues et de connaître votre état d'avancement global. Nous
