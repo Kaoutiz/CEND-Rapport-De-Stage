@@ -45,16 +45,16 @@ export function progressBar(){
     }
   
     // Utilisation de la fonction pour récupérer la valeur du cookie
-    const monCookieValue = getCookie('step');
+    const stepCookieValue = getCookie('step');
 
     // Si le cookie n'est pas vide
-    if(monCookieValue != null){
+    if(stepCookieValue != null){
 
         // On échappe les '"' de la chaine pour éviter les problèmes
-        let monCookieValueReformat = monCookieValue.replace(/"/g, "");
+        let stepCookieValueReformat = stepCookieValue.replace(/"/g, "");
 
         // On définit le tableau readChapter avec les sections stocké en cookies
-        readChapter = monCookieValueReformat.substring(1, monCookieValueReformat.length - 1).split(",");
+        readChapter = stepCookieValueReformat.substring(1, stepCookieValueReformat.length - 1).split(",");
 
         for(let i= 0 ; i < readChapter.length; i++){
             document.querySelector('[data-step =' + readChapter[i] + ']').classList.add("active");
