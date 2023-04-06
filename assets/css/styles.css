@@ -67,6 +67,9 @@ h1{
     text-align: center;
     margin-top: 30px;
     margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 h2{
@@ -82,6 +85,10 @@ h3{
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 20px 
+}
+
+.icon-title{
+    margin-right: 10px;
 }
 
 a{
@@ -206,6 +213,7 @@ nav li.non-active:hover::before {
     align-items: center;
     display: none;
     opacity: 1;
+    z-index: 99999;
 }
 
 #loading-icon{

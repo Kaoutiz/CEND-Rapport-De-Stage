@@ -103,7 +103,7 @@
         <!-- BEGIN: Step0 -->
         <section id="step0" class="stepSections">
             <p class="text-left d-flex align-items-baseline"><span>Difficulté:</span><i class='bx bx-signal-3' id="difficulty-state" title="Modéré"></i></p>
-            <h2>Rapport de stage 2023 - Gast Bryan</h2>
+            <h1><i class='bx bx-book-content icon-title'></i><span>Rapport de stage final</span></h1>
             <p>Bienvenue sur mon rapport de stage de l'année 2023. Je vais vous présenter ici le projet que j'ai réalisé lors de mon alternance dans l'entreprise Angels Digital. Pour rapel je suis en alternance dans cette entreprise depuis le 02 septembre 2022 suite au stage de l'année dernière. Le stage vais débuter le 04 avril 2022 et c'est étendue jusqu'au 31 août 2022. Il devait duré initialement 1 mois.</p>
         </section>
         <!-- END: Step0 -->

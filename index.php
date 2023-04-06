@@ -50,7 +50,7 @@
 
         <!-- BEGIN: CONTENT -->
         <section>
-            <h1>Rapport de stage - 2023 Gast Bryan</h1>
+            <h1><i class='bx bx-file icon-title'></i><span>Rapport de stage - 2023 Gast Bryan</span></h1>
             <h3>Informations</h3>  
             <ul id="information-stage">
                 <li class="d-flex"><span class="d-flex align-items-center"><i class='bx bx-map icon-infos' ></i> Lieu de stage:</span><span class="info-stage name-entreprise">Angels Digital</span></li>
