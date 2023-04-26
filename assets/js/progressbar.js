@@ -18,8 +18,8 @@ export function progressBar(){
         "step10" : "Récupération du code en base64 du scan",
         "step11" : "Envoi d'une requête au serveur avec Ajax",
         "step12" : "Traitement de la requête côté serveur en PHP",
-        "step13" : "Enregistrement des scans dans la base de données",
-        "step14" : "Récupération du résultat de la requête",
+        "step13" : "Fusion des scans en un seul PDF",
+        "step14" : "Enregistrement des scans dans la base de données",
         "step15" : "Conclusion"
     };
     let previousChapter = document.getElementById("previous-chapter");
@@ -85,6 +85,10 @@ export function progressBar(){
             // On cache tous les contenues des sections
             let stepSection = document.getElementsByClassName("stepSections");
 
+            // On affiche le bouton pour passer au prochain chapitre
+            nextChapter.classList.remove("d-none")
+            previousChapter.classList.remove("d-none")
+
             for(let j = 0; j < stepSection.length; j++){
                 stepSection[j].classList.add("d-none")
             }
@@ -108,13 +112,19 @@ export function progressBar(){
         });
     }
 
-    // On définit ce qu'il va se passé au clique sur la première section "acceuil"
+    // On définit ce qu'il va se passé au clique sur la première section "accueil"
     let firstSection = document.getElementById("start-progressbar");
 
     firstSection.addEventListener("click", function(){
 
+        // On execute la fonction qui fait un scroll auto vers le haut
+        scrollToTop();
+
         // On définit le state sur la section actuelle
         state = "step0";
+
+        // On affiche le bouton pour passer au prochain chapitre
+        nextChapter.classList.remove("d-none")
 
         // On cache tous les contenues des sections
         let stepSection = document.getElementsByClassName("stepSections");
@@ -143,6 +153,12 @@ export function progressBar(){
 
     lastSection.addEventListener("click", function(){
 
+        // On execute la fonction qui fait un scroll auto vers le haut
+        scrollToTop();
+
+        // On affiche le bouton pour aller au chapitre précédent
+        previousChapter.classList.remove("d-none")
+
         // On définit le state sur la section actuelle
         state = "step16";
 
@@ -170,6 +186,9 @@ export function progressBar(){
     });
 
     nextChapter.addEventListener("click", function(){
+
+        // On execute la fonction qui fait un scroll auto vers le haut
+        scrollToTop();
         
         // On récupère le numéro de l'étape
         let step = state.substring(4);
@@ -263,6 +282,12 @@ export function progressBar(){
     });
 
     previousChapter.addEventListener("click", function(){
+
+        // On execute la fonction qui fait un scroll auto vers le haut
+        scrollToTop();
+
+        // On affiche le bouton pour aller au chapitre suivant
+        nextChapter.classList.remove("d-none")
         
         // On récupère le numéro de l'étape
         let step = state.substring(4);
@@ -309,4 +334,12 @@ export function progressBar(){
             document.querySelector('[data-step = step16]').classList.add("active");
         }
     });
+
+    // Fonction pour faire défiler vers le haut de la page
+    function scrollToTop() {
+        window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Ajouter l'effet de défilement fluide
+        });
+    }
 }

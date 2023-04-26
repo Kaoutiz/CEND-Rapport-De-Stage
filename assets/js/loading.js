@@ -1,6 +1,7 @@
 export function loading(){
     let loading = document.getElementById("loading")
     let opacity = 1;
+    let animation;
 
     window.addEventListener('DOMContentLoaded', function() {
         loading.style.display = "block";
@@ -10,7 +11,7 @@ export function loading(){
 
         // On fait un effet de FadeOut après 1 seconde
         setTimeout(() => {
-            const animation = setInterval(animateOpacity, 10);
+            animation = setInterval(animateOpacity, 10);
         }, 1000);
 
         // On met le display none
@@ -29,7 +30,9 @@ export function loading(){
     
         // Arrêter l'animation si l'opacité est inférieure ou égale à 0
         if (opacity <= 0) {
-            clearInterval(animation);
+            if(animation != null){
+                clearInterval(animation);
+            }
         }
     }
 }

@@ -23,7 +23,24 @@
     <!-- BEGIN: JQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- END: JQuery -->
-    <?php include("templates/cookie.php"); ?>
+    <div id="cookie-overlay" class="d-none">
+        <div id="cookie-content">
+            <div id="cookie-header">
+                <p class="d-flex align-items-center title-cookie"><span>Des cookies sont nécessaires !</span><i class='bx bx-cookie'></i></p>
+            </div>
+            <div id="cookie-body">
+                <img src="assets/img/logo.svg" alt="Logo" width="150" class="logo-cookie">
+                <h2>Pour une meilleure expérience, acceptez les cookies !</h2>
+                <p>Nous utilisons les cookies afin de sauvegarder l'avancement de votre navigation sur le rapport de stage.
+                    Cela vous permettra de retrouver les sections lues et de connaître votre état d'avancement global. Nous
+                    ne stockons aucune information personnelle vous concernant.</p>
+            </div>
+            <div class="d-flex flex-column" id="cookie-footer">
+                <button id="accept-cookie">Accepter et continuer</button>
+                <div id="deny-cookie" class="d-flex align-items-center justify-content-center mt-2"><span>Refuser</span><i class='bx bx-right-arrow-alt'></i></div>
+            </div>
+        </div>
+    </div>
     <div id="cookie-cover">
 
         <!-- BEGIN: HEADER -->
@@ -46,6 +63,17 @@
                 <a href="pages/rapport-final.php"><li class="non-active">Rapport final</li></a>
             </ul>
         </nav>
+
+        <nav id="nav-mobile">
+            <i class='bx bx-menu' id="icon-nav-mobile-open"></i>
+            <i class='bx bx-x d-none' id="icon-nav-mobile-close"></i>
+
+            <ul id="nav-mobile-content" class="d-none">
+                <a href="../index.php"><li class="active">Accueil</li></a>
+                <a href="pages/rapport-lancement.php"><li class="non-active">Rapport de lancement</li></a>
+                <a href="pages/rapport-final.php"><li class="non-active">Rapport final</li></a>
+            </ul>
+        </nav>
         <!-- END: NAV -->
 
         <!-- BEGIN: CONTENT -->
@@ -60,7 +88,7 @@
         </section>
         <section class="mt-2">
             <h2>Présentation de l'entreprise</h2>
-            <p>L'entreprise dans laquelle j'effectue mon alternance se nomme Angels Digital. Elle est située à Toulouse et nous travaillons dans les locaux de l'entreprise d'audit Action Plus, qui appartient au même employeur mais ne se consacre pas du tout à la même activité. En effet, Audit Action Plus est un cabinet comptable tandis qu'Angels Digital est une entreprise de conception de logiciels et de conseil pour les entreprises souhaitant se digitaliser. La société est dirigée par M. Moufekkir en tant que président général et M. Smara en tant que président, et compte 2 alternants, dont moi. À ma connaissance, il n'y a pas d'employé sous contrat. L'entreprise a été créée le 1er décembre 2014.</p>
+            <p>L'entreprise dans laquelle j'effectue mon alternance se nomme Angels Digital. Elle est située à Toulouse et nous travaillons dans les locaux de l'entreprise d'Audit Action Plus, qui appartient au même employeur mais ne se consacre pas du tout à la même activité. En effet, Audit Action Plus est un cabinet comptable tandis qu'Angels Digital est une entreprise de conception de logiciels et de conseil pour les entreprises souhaitant se digitaliser. La société est dirigée par M. Moufekkir en tant que président général et M. Smara en tant que président, et compte 2 alternants, dont moi. À ma connaissance, il n'y a pas d'employé sous contrat. L'entreprise a été créée le 1er décembre 2014.</p>
         </section>
         <section class="mt-2">
             <h2>Sujet du stage</h2>
@@ -68,8 +96,8 @@
         </section>
         <section class="mt-2">
             <h3>Mes liens:</h3>
-            <p class="social-link-p"><a href="https://www.bryangast.fr" target="_blank" class="d-flex align-items-center"><i class='bx bx-link icon-social'></i><span class="link-social">https://www.bryangast.fr</span></a></p>
-            <p class="social-link-p"><a href="https://www.instagram.com/kaoutiz.dev/" target="_blank" class="d-flex align-items-center"><i class='bx bxl-instagram-alt icon-social'></i><span class="link-social">Kaoutiz.dev</span></a></p>
+                <p><a href="https://www.bryangast.fr" class="social-link" target="_blank"><i class='bx bx-link icon-social'></i><span class="link-social">https://www.bryangast.fr</span></a></p>
+                <p><a href="https://www.instagram.com/kaoutiz.dev/" target="_blank" class="social-link"><i class='bx bxl-instagram-alt icon-social'></i><span class="link-social">Kaoutiz.dev</span></a></p>
         </section>
         <!-- END: CONTENT -->
     </div>
